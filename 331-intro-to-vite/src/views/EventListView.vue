@@ -38,7 +38,7 @@ interface Event {
 }
 
 // Use relative path instead of alias until alias is properly configured
-import data from '../../db.json'
+import data from '../../../db.json'
 const events = ref<Event[]>(data.events)
 
 </script>
