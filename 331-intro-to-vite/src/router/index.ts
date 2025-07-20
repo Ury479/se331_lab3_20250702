@@ -4,6 +4,10 @@ import AboutView from '@/views/AboutView.vue'
 import EventDetailView from '@/views/event/DetailView.vue'
 import EventRegisterView from '@/views/event/RegisterView.vue'
 import EventEditView from '@/views/event/EditView.vue'
+import LayoutView from '@/views/event/LayoutView.vue'
+import DetailView from '@/views/event/DetailView.vue'
+import EditView from '@/views/event/EditView.vue'
+import RegisterView from '@/views/event/RegisterView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,7 +42,18 @@ const router = createRouter({
       path: '/about',
       name: 'about',
       component: AboutView
+    },
+    {
+      path: '/event/:id',
+      component: LayoutView,
+      props: true,
+      children: [
+        { path: '', name: 'event-detail-view', component: DetailView, props: true },
+        { path: 'edit', name: 'event-edit-view', component: EditView, props: true },
+        { path: 'register', name: 'event-register-view', component: RegisterView, props: true }
+      ]
     }
+
   ]
 })
 
