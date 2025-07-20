@@ -1,52 +1,49 @@
-import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
-import EventListView from '@/views/EventListView.vue'
+import { createRouter, createWebHistory } from 'vue-router'
 import AboutView from '@/views/AboutView.vue'
-import EventDetailView from '@/views/event/DetailView.vue'
-import EventRegisterView from '@/views/event/RegisterView.vue'
-import EventEditView from '@/views/event/EditView.vue'
-import EventLayoutView from '@/views/event/LayoutView.vue'
+import EventListView from '@/views/EventListView.vue'
+import LayoutView from '@/views/event/LayoutView.vue'
+import DetailView from '@/views/event/DetailView.vue'
+import EditView from '@/views/event/EditView.vue'
+import RegisterView from '@/views/event/RegisterView.vue'
 
-const routes: RouteRecordRaw[] = [
+const routes = [
   {
     path: '/',
-    name: 'event-list-view',
+    name: 'event-list',
     component: EventListView,
-    props: (route) => ({ page: parseInt(route.query.page?.toString() || '1') })
-  },
-  {
-    path: '/event/:id',
-    name: 'event-layout-view',
-    component: EventLayoutView,
-    props: true,
-    children: [
-      {
-        path: '',
-        name: 'event-detail-view',
-        component: EventDetailView,
-        props: true
-      },
-      {
-        path: 'register',
-        name: 'event-register-view',
-        component: EventRegisterView,
-        props: true
-      },
-      {
-        path: 'edit',
-        name: 'event-edit-view',
-        component: EventEditView,
-        props: true
-      }
-    ]
+    props: (route: any) => ({ page: parseInt(route.query.page as string) || 1 })
   },
   {
     path: '/about',
+    name: 'about',
     component: AboutView
+  },
+  {
+    path: '/event/:id',
+    name: 'event-layout',
+    component: LayoutView,
+    children: [
+      {
+        path: '',
+        name: 'event-detail',
+        component: DetailView
+      },
+      {
+        path: 'edit',
+        name: 'event-edit',
+        component: EditView
+      },
+      {
+        path: 'register',
+        name: 'event-register',
+        component: RegisterView
+      }
+    ]
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })
 

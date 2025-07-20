@@ -1,9 +1,22 @@
+<template>
+  <div v-if="event">
+    <h1>{{ event.title }}</h1>
+    <nav>
+      <RouterLink :to="{ name: 'event-detail' }">Details</RouterLink> |
+      <RouterLink :to="{ name: 'event-register' }">Register</RouterLink> |
+      <RouterLink :to="{ name: 'event-edit' }">Edit</RouterLink>
+    </nav>
+    <RouterView :event="event" />
+  </div>
+</template>
+
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { type Event } from '@/types'
 import EventService from '@/services/EventService'
 
 const event = ref<Event | null>(null)
+
 const props = defineProps({
   id: {
     type: String,
@@ -21,17 +34,3 @@ onMounted(() => {
     })
 })
 </script>
-
-<template>
-  <div v-if="event">
-    <h1>{{ event.title }}</h1>
-    <nav>
-      <RouterLink :to="{ name: 'event-detail-view', params: { id } }">Details</RouterLink>
-      |
-      <RouterLink :to="{ name: 'event-register-view', params: { id } }">Register</RouterLink>
-      |
-      <RouterLink :to="{ name: 'event-edit-view', params: { id } }">Edit</RouterLink>
-    </nav>
-    <RouterView :event="event" />
-  </div>
-</template>

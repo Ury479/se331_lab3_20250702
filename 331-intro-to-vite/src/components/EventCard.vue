@@ -7,12 +7,14 @@ defineProps<{
 </script>
 
 <template>
-  <div class="event-card">
-    <h3>{{ event.title }}</h3>
-    <p>{{ event.description }}</p>
-    <p><strong>Category:</strong> {{ event.category }}</p>
-    <p><strong>Organizer:</strong> {{ event.organizer }}</p>
-  </div>
+  <RouterLink :to="{ name: 'event-layout', params: { id: event.id } }" class="event-link">
+    <div class="event-card">
+      <h3>{{ event.title }}</h3>
+      <p>{{ event.description }}</p>
+      <p><strong>Category:</strong> {{ event.category }}</p>
+      <p><strong>Organizer:</strong> {{ event.organizer }}</p>
+    </div>
+  </RouterLink>
 </template>
 
 <style scoped> 

@@ -1,16 +1,19 @@
 <script setup lang="ts">
-import { toRefs, defineProps } from 'vue'
+import { toRefs } from 'vue'
 import { type Event } from '@/types'
 
 const props = defineProps<{
   event: Event
+  id: string
 }>()
 
-// 解构 event 以支持响应式绑定
 const { event } = toRefs(props)
 </script>
 
 <template>
-  <p>{{ event.time }} on {{ event.date }} @ {{ event.location }}</p>
-  <p>{{ event.description }}</p>
+  <div>
+    <h1>{{ event.title }}</h1>
+    <p>{{ event.time }} on {{ event.date }} @ {{ event.location }}</p>
+    <p>{{ event.description }}</p>
+  </div>
 </template>

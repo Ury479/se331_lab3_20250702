@@ -50,7 +50,7 @@ watchEffect(() => {
     <div class="pagination">
       <RouterLink
           id="page-prev"
-          :to="{ name: 'event-list-view', query: { page: page - 1 } }"
+          :to="{ name: 'event-list', query: { page: page - 1 } }"
           rel="prev"
           v-if="page !== 1"
       >
@@ -59,7 +59,7 @@ watchEffect(() => {
 
       <RouterLink
           id="page-next"
-          :to="{ name: 'event-list-view', query: { page: page + 1 } }"
+          :to="{ name: 'event-list', query: { page: page + 1 } }"
           rel="next"
           v-if="hasNextPage"
       >
