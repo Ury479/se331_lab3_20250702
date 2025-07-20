@@ -11,7 +11,7 @@ const props = defineProps({
 })
 
 const events = ref<any[]>([])
-const perPage = 2
+const perPage = 4
 const currentPage = computed(() => props.page)
 
 onMounted(() => {
@@ -31,13 +31,9 @@ function fetchEvents() {
 
 <template>
   <section>
-    <h2>Events - Page {{ currentPage }}</h2>
+    <h2>Events - Page {{ page }}</h2>
 
-    <div v-if="events.length === 0">
-      <p>No events found for this page.</p>
-    </div>
-
-    <div v-else>
+    <div class="events">
       <EventCard
           v-for="event in events"
           :key="event.id"
@@ -45,22 +41,25 @@ function fetchEvents() {
       />
     </div>
 
-    <div style="margin-top: 20px; display: flex; gap: 10px;">
-      <router-link
-          :to="{ name: 'event-list-view', query: { page: currentPage - 1 } }"
-          v-if="currentPage > 1"
+    <div class="pagination" style="margin-top: 20px;">
+      <RouterLink
+          v-if="page !== 1"
+          :to="{ name: 'event-list-view', query: { page: page - 1 } }"
+          rel="prev"
       >
-        ← Prev
-      </router-link>
+        ← Prev Page
+      </RouterLink>
 
-      <router-link
-          :to="{ name: 'event-list-view', query: { page: currentPage + 1 } }"
+      <RouterLink
+          :to="{ name: 'event-list-view', query: { page: page + 1 } }"
+          rel="next"
       >
-        Next →
-      </router-link>
+        Next Page →
+      </RouterLink>
     </div>
   </section>
 </template>
+
 
 <style scoped>
 h2 {
