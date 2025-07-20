@@ -7,6 +7,7 @@ import EditView from '@/views/event/EditView.vue'
 import RegisterView from '@/views/event/RegisterView.vue'
 import NotFoundView from '@/views/NotFoundView.vue'
 import NotFoundResourceView from '@/views/404ResourceView.vue'
+import NetworkErrorView from '@/views/NetworkErrorView.vue'
 
 const routes = [
   {
@@ -41,6 +42,11 @@ const routes = [
         component: RegisterView
       }
     ]
+  },
+  {
+    path: '/network-error',
+    name: 'network-error-view',
+    component: NetworkErrorView
   },
   {
     path: '/404/:resource',
