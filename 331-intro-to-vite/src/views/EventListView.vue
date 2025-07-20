@@ -1,64 +1,69 @@
-<template>
-<h1>Events For Good</h1>
-<div class="home">
-    <div class="event-card" v-for="event in events" :key="event.id">
-      <EventCard :event="event" />
-      <EventInfo :event="event" />
-    </div>
-</div>
- 
-  <div>
-    <h1>Event List</h1>
-    <ul>
-      <li v-for="event in events" :key="event.id">
-        {{ event.title }} — {{ event.location }}
-      </li>
-    </ul>
-  </div>
-</template>
-
 <script setup lang="ts">
-import EventCard from '../components/EventCard.vue'
-import EventInfo from '../components/EventInfo.vue'
-import { ref } from 'vue'   
+import { ref, onMounted, computed } from 'vue'
+import EventCard from '@/components/EventCard.vue'
+import EventService from '@/services/EventService'
 
+const props = defineProps({
+  page: {
+    type: Number,
+    required: true
+  }
+})
 
+const events = ref<any[]>([])
+const perPage = 2
+const currentPage = computed(() => props.page)
 
-// Define the Event type inline if ../types doesn't exist
-interface Event {
-  id: number;
-  category: string;
-  title: string;
-  description: string;
-  location: string;
-  date: string;
-  time: string;
-  petsAllowed: boolean;
-  organizer: string;
+onMounted(() => {
+  fetchEvents()
+})
+
+function fetchEvents() {
+  EventService.getEvents(perPage, currentPage.value)
+      .then((response) => {
+        events.value = response.data
+      })
+      .catch((error) => {
+        console.error('Failed to fetch events:', error)
+      })
 }
-
-// Use relative path instead of alias until alias is properly configured
-import data from '../../../db.json'
-const events = ref<Event[]>(data.events)
-
 </script>
 
+<template>
+  <section>
+    <h2>Events - Page {{ currentPage }}</h2>
+
+    <div v-if="events.length === 0">
+      <p>No events found for this page.</p>
+    </div>
+
+    <div v-else>
+      <EventCard
+          v-for="event in events"
+          :key="event.id"
+          :event="event"
+      />
+    </div>
+
+    <div style="margin-top: 20px; display: flex; gap: 10px;">
+      <router-link
+          :to="{ name: 'event-list-view', query: { page: currentPage - 1 } }"
+          v-if="currentPage > 1"
+      >
+        ← Prev
+      </router-link>
+
+      <router-link
+          :to="{ name: 'event-list-view', query: { page: currentPage + 1 } }"
+      >
+        Next →
+      </router-link>
+    </div>
+  </section>
+</template>
+
 <style scoped>
-  .home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .event-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 800px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
+h2 {
+  margin-bottom: 1rem;
+}
 </style>
