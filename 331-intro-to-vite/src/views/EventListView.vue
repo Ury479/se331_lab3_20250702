@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue'
 import EventCard from '@/components/EventCard.vue'
+import { type Event } from '@/types'
+import { ref, onMounted, computed } from 'vue'
 import EventService from '@/services/EventService'
 
 const props = defineProps({
@@ -10,23 +11,15 @@ const props = defineProps({
   }
 })
 
-const events = ref<any[]>([])
-const perPage = 4
-const currentPage = computed(() => props.page)
+const page = computed(() => props.page)
+const events = ref<Event[]>([])
+const perPage = 2
 
 onMounted(() => {
-  fetchEvents()
+  EventService.getEvents(perPage, page.value).then((response) => {
+    events.value = response.data
+  })
 })
-
-function fetchEvents() {
-  EventService.getEvents(perPage, currentPage.value)
-      .then((response) => {
-        events.value = response.data
-      })
-      .catch((error) => {
-        console.error('Failed to fetch events:', error)
-      })
-}
 </script>
 
 <template>
@@ -59,10 +52,3 @@ function fetchEvents() {
     </div>
   </section>
 </template>
-
-
-<style scoped>
-h2 {
-  margin-bottom: 1rem;
-}
-</style>

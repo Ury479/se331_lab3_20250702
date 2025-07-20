@@ -1,15 +1,5 @@
-<script setup lang="ts">
-interface Event {
-  id: number;
-  category: string;
-  title: string;
-  description: string;
-  location: string;
-  date: string;
-  time: string;
-  petsAllowed: boolean;
-  organizer: string;
-}
+<<script setup lang="ts">
+import { type Event } from '@/types'
 
 defineProps<{
   event: Event
@@ -17,13 +7,12 @@ defineProps<{
 </script>
 
 <template>
-  <!-- Wrap the event card in a RouterLink for navigation -->
-  <RouterLink class="event-link" :to="{ name: 'event-detail-view', params: { id: event.id } }">
   <div class="event-card">
-      <h2>{{ event.title }}</h2>
-      <span>{{ event.time }} on {{ event.date }}</span>
-    </div>
-  </RouterLink>
+    <h3>{{ event.title }}</h3>
+    <p>{{ event.description }}</p>
+    <p><strong>Category:</strong> {{ event.category }}</p>
+    <p><strong>Organizer:</strong> {{ event.organizer }}</p>
+  </div>
 </template>
 
 <style scoped> 

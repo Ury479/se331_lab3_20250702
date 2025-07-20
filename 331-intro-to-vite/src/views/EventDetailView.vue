@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { ref, onMounted, defineProps } from 'vue'
-import Event from '@/types/Event'
+import { type Event } from '@/types'
 import EventService from '@/services/EventService'
 
-const event = ref<Event>(null)
+const event = ref<Event | null>(null)
 
-// Dynamically receive ID from route
 const props = defineProps({
   id: {
     type: String,
@@ -14,21 +13,20 @@ const props = defineProps({
 })
 
 onMounted(() => {
-  EventService.getEvent(props.id)
-      .then((response) => {
-        event.value = response.data
-      })
-      .catch((error) => {
-        console.error('Failed to load event', error)
-      })
+  EventService.getEvent(parseInt(props.id)).then((response) => {
+    event.value = response.data
+  })
 })
 </script>
 
-
 <template>
   <div v-if="event">
-    <h1>{{ event.title }}</h1>
-    <p>{{ event.time }} on {{ event.date }} @ {{ event.location }}</p>
+    <h2>{{ event.title }}</h2>
     <p>{{ event.description }}</p>
+    <p>Organizer: {{ event.organizer }}</p>
+    <p>Date: {{ event.date }} | Time: {{ event.time }}</p>
+  </div>
+  <div v-else>
+    <p>Loading...</p>
   </div>
 </template>
