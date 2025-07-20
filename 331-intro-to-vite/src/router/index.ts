@@ -5,6 +5,8 @@ import LayoutView from '@/views/event/LayoutView.vue'
 import DetailView from '@/views/event/DetailView.vue'
 import EditView from '@/views/event/EditView.vue'
 import RegisterView from '@/views/event/RegisterView.vue'
+import NotFoundView from '@/views/NotFoundView.vue'
+import NotFoundResourceView from '@/views/404ResourceView.vue'
 
 const routes = [
   {
@@ -39,6 +41,17 @@ const routes = [
         component: RegisterView
       }
     ]
+  },
+  {
+    path: '/404/:resource',
+    name: '404-resource-view',
+    component: NotFoundView,
+    props: true
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'not-found',
+    component: NotFoundView
   }
 ]
 
