@@ -36,3 +36,7 @@ export interface MessageState {
 export interface EventState {
   event: Event | null
 }
+
+export interface PassengerState {
+  passenger: Passenger | null
+}

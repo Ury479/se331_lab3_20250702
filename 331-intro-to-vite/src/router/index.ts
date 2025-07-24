@@ -12,10 +12,13 @@ import PassengerListView from '@/views/PassengerListView.vue'
 import PassengerLayoutView from '@/views/passenger/LayoutView.vue'
 import PassengerDetailView from '@/views/passenger/DetailView.vue'
 import PassengerAirlinesView from '@/views/passenger/AirlinesView.vue'
+import PassengerEditView from '@/views/passenger/EditView.vue'
 import AirlineDetailView from '@/views/AirlineDetailView.vue'
 import nProgress from 'nprogress'
 import EventService from '@/services/EventService'
+import PassengerService from '@/services/PassengerService'
 import { useEventStore } from '@/stores/event'
+import { usePassengerStore } from '@/stores/passenger'
 
 const routes = [
   {
@@ -81,6 +84,24 @@ const routes = [
     name: 'passenger-layout',
     component: PassengerLayoutView,
     props: true,
+    beforeEnter: (to: RouteLocationNormalized) => {
+      const id = to.params.id as string
+      const passengerStore = usePassengerStore()
+      return PassengerService.getPassenger(id)
+        .then((response) => {
+          // need to setup the data for the passenger
+          passengerStore.setPassenger(response.data)
+        }).catch((error) => {
+          if (error.response && error.response.status === 404) {
+            return {
+              name: '404-resource-view',
+              params: { resource: 'passenger' }
+            }
+          } else {
+            return { name: 'network-error-view' }
+          }
+        })
+    },
     children: [
       {
         path: '',
@@ -91,6 +112,11 @@ const routes = [
         path: 'airlines',
         name: 'passenger-airlines',
         component: PassengerAirlinesView
+      },
+      {
+        path: 'edit',
+        name: 'passenger-edit',
+        component: PassengerEditView
       }
     ]
   },

@@ -1,17 +1,13 @@
 <script setup lang="ts">
-import { toRefs } from 'vue'
-import { type Passenger } from '@/types'
+import { usePassengerStore } from '@/stores/passenger'
+import { storeToRefs } from 'pinia'
 
-const props = defineProps<{
-  passenger: Passenger
-  id: string
-}>()
-
-const { passenger } = toRefs(props)
+const store = usePassengerStore()
+const { passenger } = storeToRefs(store)
 </script>
 
 <template>
-  <div>
+  <div v-if="passenger">
     <h2>Passenger Details</h2>
     <p><strong>Name:</strong> {{ passenger.name }}</p>
     <p><strong>Total Trips:</strong> {{ passenger.trips }}</p>

@@ -1,17 +1,13 @@
 <script setup lang="ts">
-import { toRefs } from 'vue'
-import { type Passenger } from '@/types'
+import { usePassengerStore } from '@/stores/passenger'
+import { storeToRefs } from 'pinia'
 
-const props = defineProps<{
-  passenger: Passenger
-  id: string
-}>()
-
-const { passenger } = toRefs(props)
+const store = usePassengerStore()
+const { passenger } = storeToRefs(store)
 </script>
 
 <template>
-  <div>
+  <div v-if="passenger">
     <h2>Airlines</h2>
     <div v-for="airline in passenger.airline" :key="airline.id" class="airline-card">
       <RouterLink :to="{ name: 'airline-detail', params: { airlineId: airline.id } }" class="airline-link">
