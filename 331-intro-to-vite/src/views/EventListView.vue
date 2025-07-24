@@ -11,7 +11,7 @@ const props = defineProps({
   }
 })
 
-const perPage = 2
+const perPage = 3
 const page = computed(() => props.page)
 const events = ref<Event[] | null>(null)
 const totalEvents = ref(0)
@@ -22,7 +22,6 @@ const hasNextPage = computed(() => {
 })
 
 watchEffect(() => {
-  events.value = null
   EventService.getEvents(perPage, page.value)
       .then((response) => {
         events.value = response.data
