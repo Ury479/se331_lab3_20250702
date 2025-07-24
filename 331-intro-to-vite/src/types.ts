@@ -28,3 +28,7 @@ export interface Airline {
   website: string
   established: string
 }
+
+export interface MessageState {
+  message: string
+}
