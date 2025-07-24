@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory, type RouteLocationNormalized } from 'vue-router'
 import AboutView from '@/views/AboutView.vue'
 import EventListView from '@/views/EventListView.vue'
 import LayoutView from '@/views/event/LayoutView.vue'
@@ -14,6 +14,8 @@ import PassengerDetailView from '@/views/passenger/DetailView.vue'
 import PassengerAirlinesView from '@/views/passenger/AirlinesView.vue'
 import AirlineDetailView from '@/views/AirlineDetailView.vue'
 import nProgress from 'nprogress'
+import EventService from '@/services/EventService'
+import { useEventStore } from '@/stores/event'
 
 const routes = [
   {
@@ -37,6 +39,25 @@ const routes = [
     path: '/event/:id',
     name: 'event-layout',
     component: LayoutView,
+    props: true,
+    beforeEnter: (to: RouteLocationNormalized) => {
+      const id = parseInt(to.params.id as string)
+      const eventStore = useEventStore()
+      return EventService.getEvent(id)
+        .then((response) => {
+          // need to setup the data for the event
+          eventStore.setEvent(response.data)
+        }).catch((error) => {
+          if (error.response && error.response.status === 404) {
+            return {
+              name: '404-resource-view',
+              params: { resource: 'event' }
+            }
+          } else {
+            return { name: 'network-error-view' }
+          }
+        })
+    },
     children: [
       {
         path: '',
