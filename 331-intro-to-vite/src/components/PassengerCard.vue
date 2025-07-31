@@ -7,29 +7,11 @@ defineProps<{
 </script>
 
 <template>
-  <RouterLink :to="{ name: 'passenger-layout', params: { id: passenger._id } }" class="passenger-link">
-    <div class="passenger-card">
+  <RouterLink :to="{ name: 'passenger-layout', params: { id: passenger._id } }" class="no-underline text-inherit">
+    <div class="p-[20px] w-[250px] cursor-pointer border border-gray-600 mb-[18px] hover:scale-101 hover:shadow-sp">
       <h3>{{ passenger.name }}</h3>
       <p><strong>Trips:</strong> {{ passenger.trips }}</p>
       <p><strong>Airlines:</strong> {{ passenger.airline.length }}</p>
     </div>
   </RouterLink>
 </template>
-
-<style scoped> 
-  .passenger-card {
-    padding: 20px;
-    width: 250px;
-    cursor: pointer;
-    border: 1px solid #39495c;
-    margin-bottom: 18px;
-  }
-  .passenger-card:hover {
-    transform: scale(1.01);
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
-  }
-  .passenger-link {
-    text-decoration: none;
-    color: inherit;
-  }
-</style>

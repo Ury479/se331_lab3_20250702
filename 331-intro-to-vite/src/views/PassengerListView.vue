@@ -38,7 +38,7 @@ watchEffect(() => {
   <section>
     <h2>Passengers - Page {{ page + 1 }}</h2>
 
-    <div class="passengers">
+    <div class="flex flex-wrap gap-4">
       <PassengerCard
           v-for="passenger in passengers"
           :key="passenger._id"
@@ -46,9 +46,10 @@ watchEffect(() => {
       />
     </div>
 
-    <div class="pagination">
+    <div class="flex w-72 justify-between mt-4">
       <RouterLink
           id="page-prev"
+          class="text-left no-underline text-gray-800"
           :to="{ name: 'passenger-list', query: { page: page - 1 } }"
           rel="prev"
           v-if="page !== 0"
@@ -58,6 +59,7 @@ watchEffect(() => {
 
       <RouterLink
           id="page-next"
+          class="text-right no-underline text-gray-800"
           :to="{ name: 'passenger-list', query: { page: page + 1 } }"
           rel="next"
           v-if="hasNextPage"
@@ -68,31 +70,3 @@ watchEffect(() => {
 
   </section>
 </template>
-
-<style scoped>
-.pagination {
-  display: flex;
-  width: 290px;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-
-.pagination a {
-  text-decoration: none;
-  color: #2c3e50;
-}
-
-#page-prev {
-  text-align: left;
-}
-
-#page-next {
-  text-align: right;
-}
-
-.passengers {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-</style>

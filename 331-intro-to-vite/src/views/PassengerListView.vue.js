@@ -30,14 +30,11 @@ debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_ctx = {};
 let __VLS_components;
 let __VLS_directives;
-/** @type {__VLS_StyleScopedClasses['pagination']} */ ;
-// CSS variable injection 
-// CSS variable injection end 
 __VLS_asFunctionalElement(__VLS_intrinsicElements.section, __VLS_intrinsicElements.section)({});
 __VLS_asFunctionalElement(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({});
 (__VLS_ctx.page + 1);
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
-    ...{ class: "passengers" },
+    ...{ class: "flex flex-wrap gap-4" },
 });
 for (const [passenger] of __VLS_getVForSourceType((__VLS_ctx.passengers))) {
     /** @type {[typeof PassengerCard, ]} */ ;
@@ -52,7 +49,7 @@ for (const [passenger] of __VLS_getVForSourceType((__VLS_ctx.passengers))) {
     }, ...__VLS_functionalComponentArgsRest(__VLS_0));
 }
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
-    ...{ class: "pagination" },
+    ...{ class: "flex w-72 justify-between mt-4" },
 });
 if (__VLS_ctx.page !== 0) {
     const __VLS_3 = {}.RouterLink;
@@ -60,11 +57,13 @@ if (__VLS_ctx.page !== 0) {
     // @ts-ignore
     const __VLS_4 = __VLS_asFunctionalComponent(__VLS_3, new __VLS_3({
         id: "page-prev",
+        ...{ class: "text-left no-underline text-gray-800" },
         to: ({ name: 'passenger-list', query: { page: __VLS_ctx.page - 1 } }),
         rel: "prev",
     }));
     const __VLS_5 = __VLS_4({
         id: "page-prev",
+        ...{ class: "text-left no-underline text-gray-800" },
         to: ({ name: 'passenger-list', query: { page: __VLS_ctx.page - 1 } }),
         rel: "prev",
     }, ...__VLS_functionalComponentArgsRest(__VLS_4));
@@ -77,19 +76,32 @@ if (__VLS_ctx.hasNextPage) {
     // @ts-ignore
     const __VLS_8 = __VLS_asFunctionalComponent(__VLS_7, new __VLS_7({
         id: "page-next",
+        ...{ class: "text-right no-underline text-gray-800" },
         to: ({ name: 'passenger-list', query: { page: __VLS_ctx.page + 1 } }),
         rel: "next",
     }));
     const __VLS_9 = __VLS_8({
         id: "page-next",
+        ...{ class: "text-right no-underline text-gray-800" },
         to: ({ name: 'passenger-list', query: { page: __VLS_ctx.page + 1 } }),
         rel: "next",
     }, ...__VLS_functionalComponentArgsRest(__VLS_8));
     __VLS_10.slots.default;
     var __VLS_10;
 }
-/** @type {__VLS_StyleScopedClasses['passengers']} */ ;
-/** @type {__VLS_StyleScopedClasses['pagination']} */ ;
+/** @type {__VLS_StyleScopedClasses['flex']} */ ;
+/** @type {__VLS_StyleScopedClasses['flex-wrap']} */ ;
+/** @type {__VLS_StyleScopedClasses['gap-4']} */ ;
+/** @type {__VLS_StyleScopedClasses['flex']} */ ;
+/** @type {__VLS_StyleScopedClasses['w-72']} */ ;
+/** @type {__VLS_StyleScopedClasses['justify-between']} */ ;
+/** @type {__VLS_StyleScopedClasses['mt-4']} */ ;
+/** @type {__VLS_StyleScopedClasses['text-left']} */ ;
+/** @type {__VLS_StyleScopedClasses['no-underline']} */ ;
+/** @type {__VLS_StyleScopedClasses['text-gray-800']} */ ;
+/** @type {__VLS_StyleScopedClasses['text-right']} */ ;
+/** @type {__VLS_StyleScopedClasses['no-underline']} */ ;
+/** @type {__VLS_StyleScopedClasses['text-gray-800']} */ ;
 var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
     setup() {

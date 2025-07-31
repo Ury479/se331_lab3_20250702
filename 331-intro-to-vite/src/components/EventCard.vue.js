@@ -17,7 +17,7 @@ const __VLS_2 = __VLS_1({
 var __VLS_4 = {};
 __VLS_3.slots.default;
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
-    ...{ class: "cursor-pointer border border-gray-600 p-4 w-64 mb-6 hover:scale-101 hover:shadow-sp" },
+    ...{ class: "cursor-pointer border border-gray-600 p-[20px] w-[250px] mb-[18px] hover:scale-101 hover:shadow-sp" },
 });
 __VLS_asFunctionalElement(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({});
 (__VLS_ctx.event.title);
@@ -29,9 +29,9 @@ var __VLS_3;
 /** @type {__VLS_StyleScopedClasses['cursor-pointer']} */ ;
 /** @type {__VLS_StyleScopedClasses['border']} */ ;
 /** @type {__VLS_StyleScopedClasses['border-gray-600']} */ ;
-/** @type {__VLS_StyleScopedClasses['p-4']} */ ;
-/** @type {__VLS_StyleScopedClasses['w-64']} */ ;
-/** @type {__VLS_StyleScopedClasses['mb-6']} */ ;
+/** @type {__VLS_StyleScopedClasses['p-[20px]']} */ ;
+/** @type {__VLS_StyleScopedClasses['w-[250px]']} */ ;
+/** @type {__VLS_StyleScopedClasses['mb-[18px]']} */ ;
 /** @type {__VLS_StyleScopedClasses['hover:scale-101']} */ ;
 /** @type {__VLS_StyleScopedClasses['hover:shadow-sp']} */ ;
 var __VLS_dollars;

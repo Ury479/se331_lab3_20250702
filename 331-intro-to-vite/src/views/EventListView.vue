@@ -46,7 +46,7 @@ watchEffect(() => {
       />
     </div>
 
-    <div class="pagination">
+    <div class="flex w-72 justify-between mt-4">
       <RouterLink
           id="page-prev"
           :to="{ name: 'event-list', query: { page: page - 1 } }"
@@ -68,14 +68,4 @@ watchEffect(() => {
 
   </section>
 </template>
-
-<style scoped>
-.pagination {
-  display: flex;
-  width: 290px;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-
-</style>
 
