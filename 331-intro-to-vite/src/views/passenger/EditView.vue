@@ -25,22 +25,6 @@ const updatePassenger = () => {
     <p><strong>Name:</strong> {{ passenger.name }}</p>
     <p><strong>Total Trips:</strong> {{ passenger.trips }}</p>
     <p><strong>Number of Airlines:</strong> {{ passenger.airline.length }}</p>
-    <button @click="updatePassenger">Update Passenger Details</button>
+    <button @click="updatePassenger" class="py-2 px-5 bg-green-500 text-white border-none rounded cursor-pointer mt-2 hover:bg-green-600">Update Passenger Details</button>
   </div>
 </template>
-
-<style scoped>
-button {
-  padding: 10px 20px;
-  background-color: #42b983;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-button:hover {
-  background-color: #369870;
-}
-</style>

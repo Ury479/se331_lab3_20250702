@@ -3,16 +3,15 @@ debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_ctx = {};
 let __VLS_components;
 let __VLS_directives;
-// CSS variable injection 
-// CSS variable injection end 
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
-    ...{ class: "meta" },
+    ...{ class: "text-right text-base" },
 });
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
 (__VLS_ctx.category);
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
 (__VLS_ctx.organizer);
-/** @type {__VLS_StyleScopedClasses['meta']} */ ;
+/** @type {__VLS_StyleScopedClasses['text-right']} */ ;
+/** @type {__VLS_StyleScopedClasses['text-base']} */ ;
 var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
     setup() {

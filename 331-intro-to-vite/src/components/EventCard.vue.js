@@ -8,11 +8,11 @@ const __VLS_0 = {}.RouterLink;
 // @ts-ignore
 const __VLS_1 = __VLS_asFunctionalComponent(__VLS_0, new __VLS_0({
     ...{ class: "event-link" },
-    to: ({ name: 'event-detail-view', params: { id: __VLS_ctx.event.id } }),
+    to: ({ name: 'event-detail', params: { id: __VLS_ctx.event.id } }),
 }));
 const __VLS_2 = __VLS_1({
     ...{ class: "event-link" },
-    to: ({ name: 'event-detail-view', params: { id: __VLS_ctx.event.id } }),
+    to: ({ name: 'event-detail', params: { id: __VLS_ctx.event.id } }),
 }, ...__VLS_functionalComponentArgsRest(__VLS_1));
 var __VLS_4 = {};
 __VLS_3.slots.default;

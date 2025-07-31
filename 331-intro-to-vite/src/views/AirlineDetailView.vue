@@ -34,107 +34,34 @@ onMounted(() => {
 
 <template>
   <div v-if="airline">
-    <div class="airline-detail">
-      <div class="airline-header">
-        <img :src="airline.logo" :alt="airline.name" class="airline-logo-large" />
-        <div class="airline-info">
-          <h1>{{ airline.name }}</h1>
-          <p class="slogan">{{ airline.slogan }}</p>
+    <div class="max-w-4xl mx-auto p-5">
+      <div class="flex items-center gap-5 mb-8 pb-5 border-b-2 border-gray-200">
+        <img :src="airline.logo" :alt="airline.name" class="w-30 h-30 object-contain" />
+        <div>
+          <h1 class="m-0 mb-2 text-gray-800">{{ airline.name }}</h1>
+          <p class="italic text-gray-600 text-lg">{{ airline.slogan }}</p>
         </div>
       </div>
       
-      <div class="airline-details">
-        <div class="detail-item">
-          <strong>Country:</strong> {{ airline.country }}
+      <div class="grid gap-4 mb-8">
+        <div class="p-2 bg-gray-50 rounded">
+          <strong class="text-gray-800">Country:</strong> {{ airline.country }}
         </div>
-        <div class="detail-item">
-          <strong>Headquarters:</strong> {{ airline.head_quaters }}
+        <div class="p-2 bg-gray-50 rounded">
+          <strong class="text-gray-800">Headquarters:</strong> {{ airline.head_quaters }}
         </div>
-        <div class="detail-item">
-          <strong>Website:</strong> <a :href="airline.website" target="_blank">{{ airline.website }}</a>
+        <div class="p-2 bg-gray-50 rounded">
+          <strong class="text-gray-800">Website:</strong> <a :href="airline.website" target="_blank" class="text-blue-600 no-underline hover:underline">{{ airline.website }}</a>
         </div>
-        <div class="detail-item">
-          <strong>Established:</strong> {{ airline.established }}
+        <div class="p-2 bg-gray-50 rounded">
+          <strong class="text-gray-800">Established:</strong> {{ airline.established }}
         </div>
       </div>
       
-      <button @click="$router.go(-1)" class="back-button">← Back</button>
+      <button @click="$router.go(-1)" class="bg-blue-500 text-white border-none py-2 px-5 rounded cursor-pointer text-base hover:bg-blue-600">← Back</button>
     </div>
   </div>
   <div v-else>
     <p>Loading airline details...</p>
   </div>
 </template>
-
-<style scoped>
-.airline-detail {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.airline-header {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid #eee;
-}
-
-.airline-logo-large {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-}
-
-.airline-info h1 {
-  margin: 0 0 10px 0;
-  color: #333;
-}
-
-.slogan {
-  font-style: italic;
-  color: #666;
-  font-size: 1.1em;
-}
-
-.airline-details {
-  display: grid;
-  gap: 15px;
-  margin-bottom: 30px;
-}
-
-.detail-item {
-  padding: 10px;
-  background-color: #f9f9f9;
-  border-radius: 5px;
-}
-
-.detail-item strong {
-  color: #333;
-}
-
-.detail-item a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-.detail-item a:hover {
-  text-decoration: underline;
-}
-
-.back-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.back-button:hover {
-  background-color: #0056b3;
-}
-</style>

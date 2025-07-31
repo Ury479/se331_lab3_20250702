@@ -8,16 +8,30 @@ const { message } = storeToRefs(store)
 </script>
 
 <template>
-  <div class="text-center font-sans text-gray-700 antialias">
-  <header>
+  <div class="text-center font-sans text-gray-700 antialiased">
+    <header>
       <div id="flashMessage" class="animate-fade" v-if="message">
         <h4>{{ message }}</h4>
       </div>
       <div class="wrapper">
-        <nav class="py-6">
-          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'event-list' }">Events</RouterLink> |
-          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'passenger-list' }">Passengers</RouterLink> |
-          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'about' }">About</RouterLink>
+        <nav class="py-[24px]">
+          <RouterLink
+            class="font-bold text-gray-700"
+            exact-active-class="text-green-500"
+            :to="{ name: 'event-list' }"
+          >Events</RouterLink>
+          |
+          <RouterLink
+            class="font-bold text-gray-700"
+            exact-active-class="text-green-500"
+            :to="{ name: 'passenger-list' }"
+          >Passengers</RouterLink>
+          |
+          <RouterLink
+            class="font-bold text-gray-700"
+            exact-active-class="text-green-500"
+            :to="{ name: 'about' }"
+          >About</RouterLink>
         </nav>
       </div>
     </header>

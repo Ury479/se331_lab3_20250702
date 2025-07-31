@@ -10,7 +10,7 @@ let __VLS_directives;
 // CSS variable injection 
 // CSS variable injection end 
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
-    ...{ class: "text-center font-sans text-gray-700 antialias" },
+    ...{ class: "text-center font-sans text-gray-700 antialiased" },
 });
 __VLS_asFunctionalElement(__VLS_intrinsicElements.header, __VLS_intrinsicElements.header)({});
 if (__VLS_ctx.message) {
@@ -25,7 +25,7 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.d
     ...{ class: "wrapper" },
 });
 __VLS_asFunctionalElement(__VLS_intrinsicElements.nav, __VLS_intrinsicElements.nav)({
-    ...{ class: "py-6" },
+    ...{ class: "py-[24px]" },
 });
 const __VLS_0 = {}.RouterLink;
 /** @type {[typeof __VLS_components.RouterLink, typeof __VLS_components.RouterLink, ]} */ ;
@@ -80,10 +80,10 @@ const __VLS_14 = __VLS_13({}, ...__VLS_functionalComponentArgsRest(__VLS_13));
 /** @type {__VLS_StyleScopedClasses['text-center']} */ ;
 /** @type {__VLS_StyleScopedClasses['font-sans']} */ ;
 /** @type {__VLS_StyleScopedClasses['text-gray-700']} */ ;
-/** @type {__VLS_StyleScopedClasses['antialias']} */ ;
+/** @type {__VLS_StyleScopedClasses['antialiased']} */ ;
 /** @type {__VLS_StyleScopedClasses['animate-fade']} */ ;
 /** @type {__VLS_StyleScopedClasses['wrapper']} */ ;
-/** @type {__VLS_StyleScopedClasses['py-6']} */ ;
+/** @type {__VLS_StyleScopedClasses['py-[24px]']} */ ;
 /** @type {__VLS_StyleScopedClasses['font-bold']} */ ;
 /** @type {__VLS_StyleScopedClasses['text-gray-700']} */ ;
 /** @type {__VLS_StyleScopedClasses['font-bold']} */ ;

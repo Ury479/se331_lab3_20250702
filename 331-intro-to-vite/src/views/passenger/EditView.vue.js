@@ -18,8 +18,6 @@ debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_ctx = {};
 let __VLS_components;
 let __VLS_directives;
-// CSS variable injection 
-// CSS variable injection end 
 if (__VLS_ctx.passenger) {
     __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
     __VLS_asFunctionalElement(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({});
@@ -35,8 +33,18 @@ if (__VLS_ctx.passenger) {
     (__VLS_ctx.passenger.airline.length);
     __VLS_asFunctionalElement(__VLS_intrinsicElements.button, __VLS_intrinsicElements.button)({
         ...{ onClick: (__VLS_ctx.updatePassenger) },
+        ...{ class: "py-2 px-5 bg-green-500 text-white border-none rounded cursor-pointer mt-2 hover:bg-green-600" },
     });
 }
+/** @type {__VLS_StyleScopedClasses['py-2']} */ ;
+/** @type {__VLS_StyleScopedClasses['px-5']} */ ;
+/** @type {__VLS_StyleScopedClasses['bg-green-500']} */ ;
+/** @type {__VLS_StyleScopedClasses['text-white']} */ ;
+/** @type {__VLS_StyleScopedClasses['border-none']} */ ;
+/** @type {__VLS_StyleScopedClasses['rounded']} */ ;
+/** @type {__VLS_StyleScopedClasses['cursor-pointer']} */ ;
+/** @type {__VLS_StyleScopedClasses['mt-2']} */ ;
+/** @type {__VLS_StyleScopedClasses['hover:bg-green-600']} */ ;
 var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
     setup() {

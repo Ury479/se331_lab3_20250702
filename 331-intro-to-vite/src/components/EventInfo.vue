@@ -1,7 +1,7 @@
 <template>
-  <div class="event-info">
-    <div>{{ event.category }}</div>
-    <div>{{ event.organizer }}</div>
+  <div class="space-y-1">
+    <div class="text-sm text-gray-600">{{ event.category }}</div>
+    <div class="text-sm text-gray-600">{{ event.organizer }}</div>
   </div>
 </template>
 

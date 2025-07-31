@@ -1,0 +1,242 @@
+[
+  {
+    "_id": "60a9a8f9c85b4a001f9b2e41",
+    "name": "John Smith",
+    "trips": 15,
+    "airline": [
+      {
+        "id": 1,
+        "name": "American Airlines",
+        "country": "United States",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/American_Airlines_logo_2013.svg/1200px-American_Airlines_logo_2013.svg.png",
+        "slogan": "Going for great",
+        "head_quaters": "Fort Worth, Texas",
+        "website": "https://www.aa.com",
+        "established": "1930"
+      },
+      {
+        "id": 2,
+        "name": "Delta Air Lines",
+        "country": "United States", 
+        "logo": "https://logos-world.net/wp-content/uploads/2020/03/Delta-Air-Lines-Logo.png",
+        "slogan": "Keep Climbing",
+        "head_quaters": "Atlanta, Georgia",
+        "website": "https://www.delta.com",
+        "established": "1924"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "60a9a8f9c85b4a001f9b2e42",
+    "name": "Sarah Johnson",
+    "trips": 8,
+    "airline": [
+      {
+        "id": 3,
+        "name": "United Airlines",
+        "country": "United States",
+        "logo": "https://logos-world.net/wp-content/uploads/2020/03/United-Airlines-Logo.png",
+        "slogan": "Fly the friendly skies",
+        "head_quaters": "Chicago, Illinois",
+        "website": "https://www.united.com",
+        "established": "1926"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "60a9a8f9c85b4a001f9b2e43",
+    "name": "Michael Davis",
+    "trips": 22,
+    "airline": [
+      {
+        "id": 1,
+        "name": "American Airlines",
+        "country": "United States",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/American_Airlines_logo_2013.svg/1200px-American_Airlines_logo_2013.svg.png",
+        "slogan": "Going for great",
+        "head_quaters": "Fort Worth, Texas",
+        "website": "https://www.aa.com",
+        "established": "1930"
+      },
+      {
+        "id": 4,
+        "name": "Southwest Airlines",
+        "country": "United States",
+        "logo": "https://logos-world.net/wp-content/uploads/2020/03/Southwest-Airlines-Logo.png",
+        "slogan": "Low fares. Nothing to hide.",
+        "head_quaters": "Dallas, Texas",
+        "website": "https://www.southwest.com",
+        "established": "1967"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "60a9a8f9c85b4a001f9b2e44",
+    "name": "Emily Wilson",
+    "trips": 12,
+    "airline": [
+      {
+        "id": 2,
+        "name": "Delta Air Lines",
+        "country": "United States",
+        "logo": "https://logos-world.net/wp-content/uploads/2020/03/Delta-Air-Lines-Logo.png",
+        "slogan": "Keep Climbing",
+        "head_quaters": "Atlanta, Georgia",
+        "website": "https://www.delta.com",
+        "established": "1924"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "60a9a8f9c85b4a001f9b2e45",
+    "name": "David Brown",
+    "trips": 18,
+    "airline": [
+      {
+        "id": 3,
+        "name": "United Airlines",
+        "country": "United States",
+        "logo": "https://logos-world.net/wp-content/uploads/2020/03/United-Airlines-Logo.png",
+        "slogan": "Fly the friendly skies",
+        "head_quaters": "Chicago, Illinois",
+        "website": "https://www.united.com",
+        "established": "1926"
+      },
+      {
+        "id": 5,
+        "name": "JetBlue Airways",
+        "country": "United States",
+        "logo": "https://logos-world.net/wp-content/uploads/2020/03/JetBlue-Airways-Logo.png",
+        "slogan": "You above all",
+        "head_quaters": "New York City, New York",
+        "website": "https://www.jetblue.com",
+        "established": "1998"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "60a9a8f9c85b4a001f9b2e46",
+    "name": "Lisa Anderson",
+    "trips": 6,
+    "airline": [
+      {
+        "id": 4,
+        "name": "Southwest Airlines",
+        "country": "United States",
+        "logo": "https://logos-world.net/wp-content/uploads/2020/03/Southwest-Airlines-Logo.png",
+        "slogan": "Low fares. Nothing to hide.",
+        "head_quaters": "Dallas, Texas",
+        "website": "https://www.southwest.com",
+        "established": "1967"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "60a9a8f9c85b4a001f9b2e47",
+    "name": "Robert Taylor",
+    "trips": 25,
+    "airline": [
+      {
+        "id": 1,
+        "name": "American Airlines",
+        "country": "United States",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/American_Airlines_logo_2013.svg/1200px-American_Airlines_logo_2013.svg.png",
+        "slogan": "Going for great",
+        "head_quaters": "Fort Worth, Texas",
+        "website": "https://www.aa.com",
+        "established": "1930"
+      },
+      {
+        "id": 2,
+        "name": "Delta Air Lines",
+        "country": "United States",
+        "logo": "https://logos-world.net/wp-content/uploads/2020/03/Delta-Air-Lines-Logo.png",
+        "slogan": "Keep Climbing",
+        "head_quaters": "Atlanta, Georgia",
+        "website": "https://www.delta.com",
+        "established": "1924"
+      },
+      {
+        "id": 3,
+        "name": "United Airlines",
+        "country": "United States",
+        "logo": "https://logos-world.net/wp-content/uploads/2020/03/United-Airlines-Logo.png",
+        "slogan": "Fly the friendly skies",
+        "head_quaters": "Chicago, Illinois",
+        "website": "https://www.united.com",
+        "established": "1926"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "60a9a8f9c85b4a001f9b2e48",
+    "name": "Jennifer Martinez",
+    "trips": 9,
+    "airline": [
+      {
+        "id": 5,
+        "name": "JetBlue Airways",
+        "country": "United States",
+        "logo": "https://logos-world.net/wp-content/uploads/2020/03/JetBlue-Airways-Logo.png",
+        "slogan": "You above all",
+        "head_quaters": "New York City, New York",
+        "website": "https://www.jetblue.com",
+        "established": "1998"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "60a9a8f9c85b4a001f9b2e49",
+    "name": "Christopher Garcia",
+    "trips": 14,
+    "airline": [
+      {
+        "id": 2,
+        "name": "Delta Air Lines",
+        "country": "United States",
+        "logo": "https://logos-world.net/wp-content/uploads/2020/03/Delta-Air-Lines-Logo.png",
+        "slogan": "Keep Climbing",
+        "head_quaters": "Atlanta, Georgia",
+        "website": "https://www.delta.com",
+        "established": "1924"
+      },
+      {
+        "id": 4,
+        "name": "Southwest Airlines",
+        "country": "United States",
+        "logo": "https://logos-world.net/wp-content/uploads/2020/03/Southwest-Airlines-Logo.png",
+        "slogan": "Low fares. Nothing to hide.",
+        "head_quaters": "Dallas, Texas",
+        "website": "https://www.southwest.com",
+        "established": "1967"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "60a9a8f9c85b4a001f9b2e50",
+    "name": "Amanda Rodriguez",
+    "trips": 11,
+    "airline": [
+      {
+        "id": 1,
+        "name": "American Airlines",
+        "country": "United States",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/American_Airlines_logo_2013.svg/1200px-American_Airlines_logo_2013.svg.png",
+        "slogan": "Going for great",
+        "head_quaters": "Fort Worth, Texas",
+        "website": "https://www.aa.com",
+        "established": "1930"
+      }
+    ],
+    "__v": 0
+  }
+]

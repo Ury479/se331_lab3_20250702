@@ -2,9 +2,21 @@
   <div v-if="passenger">
     <h1>{{ passenger.name }}</h1>
     <nav>
-      <RouterLink :to="{ name: 'passenger-detail' }">Passenger Details</RouterLink> |
-      <RouterLink :to="{ name: 'passenger-airlines' }">Airlines</RouterLink> |
-      <RouterLink :to="{ name: 'passenger-edit' }">Edit</RouterLink>
+      <RouterLink 
+        class="font-bold text-gray-700" 
+        exact-active-class="text-green-500" 
+        :to="{ name: 'passenger-detail' }"
+      >Passenger Details</RouterLink> |
+      <RouterLink 
+        class="font-bold text-gray-700" 
+        exact-active-class="text-green-500" 
+        :to="{ name: 'passenger-airlines' }"
+      >Airlines</RouterLink> |
+      <RouterLink 
+        class="font-bold text-gray-700" 
+        exact-active-class="text-green-500" 
+        :to="{ name: 'passenger-edit' }"
+      >Edit</RouterLink>
     </nav>
     <RouterView :passenger="passenger" />
   </div>

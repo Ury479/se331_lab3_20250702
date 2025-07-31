@@ -20,7 +20,11 @@
     },
 
     /* ✅ 类型提示支持 */
-    "types": ["vite/client"]
+    "types": ["vite/client"],
+    
+    /* ✅ JSON模块支持 */
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

@@ -2,9 +2,21 @@
   <div v-if="event">
     <h1>{{ event.title }}</h1>
     <nav>
-      <RouterLink :to="{ name: 'event-detail' }">Details</RouterLink> |
-      <RouterLink :to="{ name: 'event-register' }">Register</RouterLink> |
-      <RouterLink :to="{ name: 'event-edit' }">Edit</RouterLink>
+      <RouterLink 
+        class="font-bold text-gray-700" 
+        exact-active-class="text-green-500" 
+        :to="{ name: 'event-detail' }"
+      >Details</RouterLink> |
+      <RouterLink 
+        class="font-bold text-gray-700" 
+        exact-active-class="text-green-500" 
+        :to="{ name: 'event-register' }"
+      >Register</RouterLink> |
+      <RouterLink 
+        class="font-bold text-gray-700" 
+        exact-active-class="text-green-500" 
+        :to="{ name: 'event-edit' }"
+      >Edit</RouterLink>
     </nav>
     <RouterView :event="event" />
   </div>

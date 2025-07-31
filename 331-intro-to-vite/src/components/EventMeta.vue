@@ -1,5 +1,5 @@
 <template>
-    <div class="meta">
+    <div class="text-right text-base">
       <div>{{ category }}</div>
       <div>{{ organizer }}</div>
     </div>
@@ -11,11 +11,4 @@
     organizer: string
   }>()
   </script>
-  
-  <style scoped>
-  .meta {
-    text-align: right;
-    font-size: 1rem;
-  }
-  </style>
   
