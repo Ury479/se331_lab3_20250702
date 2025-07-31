@@ -21,12 +21,3 @@ interface Event {
 defineProps<{ event: Event }>()
 </script>
 
-<style scoped>
-.event-info {
-  text-align: right;
-  font-size: 1rem;
-}
-.event-info > div {
-  font-size: 1rem;
-}
-</style>
