@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "cd 331-intro-to-vite && npm run dev",
+    "build": "cd 331-intro-to-vite && npm run build",
+    "preview": "cd 331-intro-to-vite && npm run preview",
+    "test": "cd 331-intro-to-vite && npm run test"
   },
   "keywords": [],
   "author": "",
