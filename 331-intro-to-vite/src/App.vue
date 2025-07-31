@@ -8,8 +8,8 @@ const { message } = storeToRefs(store)
 </script>
 
 <template>
-  <div id="layout">
-    <header>
+  <div class="text-center font-sans text-gray-700 antialias">
+  <header>
       <div id="flashMessage" v-if="message">
         <h4>{{ message }}</h4>
       </div>
@@ -27,14 +27,6 @@ const { message } = storeToRefs(store)
 </template>
 
 <style scoped>
-#layout {
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
 nav {
   padding: 30px;
 }

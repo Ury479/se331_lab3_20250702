@@ -38,7 +38,7 @@ watchEffect(() => {
   <section>
     <h2>Events - Page {{ page }}</h2>
 
-    <div class="events">
+    <div class="flex flex-col items-center">
       <EventCard
           v-for="event in events"
           :key="event.id"
@@ -77,17 +77,5 @@ watchEffect(() => {
   margin-top: 1rem;
 }
 
-.pagination a {
-  text-decoration: none;
-  color: #2c3e50;
-}
-
-#page-prev {
-  text-align: left;
-}
-
-#page-next {
-  text-align: right;
-}
 </style>
 
