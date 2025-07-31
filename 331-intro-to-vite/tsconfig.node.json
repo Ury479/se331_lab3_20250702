@@ -21,8 +21,8 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
-    /* ✅ 修复 TS5096 报错所需 */
-    "noEmit": true
+    /* ✅ 修复 TS5096 + TS6310 */
+    "emitDeclarationOnly": true
   },
   "include": ["vite.config.ts"]
 }

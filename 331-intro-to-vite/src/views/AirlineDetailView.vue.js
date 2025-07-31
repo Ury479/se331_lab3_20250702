@@ -28,78 +28,99 @@ onMounted(() => {
 });
 debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_ctx = {};
+let __VLS_elements;
 let __VLS_components;
 let __VLS_directives;
 if (__VLS_ctx.airline) {
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    // @ts-ignore
+    [airline,];
+    __VLS_asFunctionalElement(__VLS_elements.div, __VLS_elements.div)({});
+    __VLS_asFunctionalElement(__VLS_elements.div, __VLS_elements.div)({
         ...{ class: "max-w-4xl mx-auto p-5" },
     });
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    __VLS_asFunctionalElement(__VLS_elements.div, __VLS_elements.div)({
         ...{ class: "flex items-center gap-5 mb-8 pb-5 border-b-2 border-gray-200" },
     });
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.img)({
+    __VLS_asFunctionalElement(__VLS_elements.img)({
         src: (__VLS_ctx.airline.logo),
         alt: (__VLS_ctx.airline.name),
         ...{ class: "w-30 h-30 object-contain" },
     });
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.h1, __VLS_intrinsicElements.h1)({
+    // @ts-ignore
+    [airline, airline,];
+    __VLS_asFunctionalElement(__VLS_elements.div, __VLS_elements.div)({});
+    __VLS_asFunctionalElement(__VLS_elements.h1, __VLS_elements.h1)({
         ...{ class: "m-0 mb-2 text-gray-800" },
     });
     (__VLS_ctx.airline.name);
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({
+    // @ts-ignore
+    [airline,];
+    __VLS_asFunctionalElement(__VLS_elements.p, __VLS_elements.p)({
         ...{ class: "italic text-gray-600 text-lg" },
     });
     (__VLS_ctx.airline.slogan);
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    // @ts-ignore
+    [airline,];
+    __VLS_asFunctionalElement(__VLS_elements.div, __VLS_elements.div)({
         ...{ class: "grid gap-4 mb-8" },
     });
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    __VLS_asFunctionalElement(__VLS_elements.div, __VLS_elements.div)({
         ...{ class: "p-2 bg-gray-50 rounded" },
     });
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.strong, __VLS_intrinsicElements.strong)({
+    __VLS_asFunctionalElement(__VLS_elements.strong, __VLS_elements.strong)({
         ...{ class: "text-gray-800" },
     });
     (__VLS_ctx.airline.country);
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    // @ts-ignore
+    [airline,];
+    __VLS_asFunctionalElement(__VLS_elements.div, __VLS_elements.div)({
         ...{ class: "p-2 bg-gray-50 rounded" },
     });
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.strong, __VLS_intrinsicElements.strong)({
+    __VLS_asFunctionalElement(__VLS_elements.strong, __VLS_elements.strong)({
         ...{ class: "text-gray-800" },
     });
     (__VLS_ctx.airline.head_quaters);
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    // @ts-ignore
+    [airline,];
+    __VLS_asFunctionalElement(__VLS_elements.div, __VLS_elements.div)({
         ...{ class: "p-2 bg-gray-50 rounded" },
     });
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.strong, __VLS_intrinsicElements.strong)({
+    __VLS_asFunctionalElement(__VLS_elements.strong, __VLS_elements.strong)({
         ...{ class: "text-gray-800" },
     });
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.a, __VLS_intrinsicElements.a)({
+    __VLS_asFunctionalElement(__VLS_elements.a, __VLS_elements.a)({
         href: (__VLS_ctx.airline.website),
         target: "_blank",
         ...{ class: "text-blue-600 no-underline hover:underline" },
     });
+    // @ts-ignore
+    [airline,];
     (__VLS_ctx.airline.website);
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    // @ts-ignore
+    [airline,];
+    __VLS_asFunctionalElement(__VLS_elements.div, __VLS_elements.div)({
         ...{ class: "p-2 bg-gray-50 rounded" },
     });
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.strong, __VLS_intrinsicElements.strong)({
+    __VLS_asFunctionalElement(__VLS_elements.strong, __VLS_elements.strong)({
         ...{ class: "text-gray-800" },
     });
     (__VLS_ctx.airline.established);
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.button, __VLS_intrinsicElements.button)({
+    // @ts-ignore
+    [airline,];
+    __VLS_asFunctionalElement(__VLS_elements.button, __VLS_elements.button)({
         ...{ onClick: (...[$event]) => {
                 if (!(__VLS_ctx.airline))
                     return;
                 __VLS_ctx.$router.go(-1);
+                // @ts-ignore
+                [$router,];
             } },
         ...{ class: "bg-blue-500 text-white border-none py-2 px-5 rounded cursor-pointer text-base hover:bg-blue-600" },
     });
 }
 else {
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({});
+    __VLS_asFunctionalElement(__VLS_elements.div, __VLS_elements.div)({});
+    __VLS_asFunctionalElement(__VLS_elements.p, __VLS_elements.p)({});
 }
 /** @type {__VLS_StyleScopedClasses['max-w-4xl']} */ ;
 /** @type {__VLS_StyleScopedClasses['mx-auto']} */ ;
@@ -167,7 +188,6 @@ const __VLS_self = (await import('vue')).defineComponent({
 });
 export default (await import('vue')).defineComponent({
     setup() {
-        return {};
     },
     props: {
         airlineId: {

@@ -16,25 +16,38 @@ const updatePassenger = () => {
 };
 debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_ctx = {};
+let __VLS_elements;
 let __VLS_components;
 let __VLS_directives;
 if (__VLS_ctx.passenger) {
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({});
+    // @ts-ignore
+    [passenger,];
+    __VLS_asFunctionalElement(__VLS_elements.div, __VLS_elements.div)({});
+    __VLS_asFunctionalElement(__VLS_elements.h2, __VLS_elements.h2)({});
     (__VLS_ctx.passenger.name);
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({});
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.strong, __VLS_intrinsicElements.strong)({});
+    // @ts-ignore
+    [passenger,];
+    __VLS_asFunctionalElement(__VLS_elements.p, __VLS_elements.p)({});
+    __VLS_asFunctionalElement(__VLS_elements.strong, __VLS_elements.strong)({});
     (__VLS_ctx.passenger.name);
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({});
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.strong, __VLS_intrinsicElements.strong)({});
+    // @ts-ignore
+    [passenger,];
+    __VLS_asFunctionalElement(__VLS_elements.p, __VLS_elements.p)({});
+    __VLS_asFunctionalElement(__VLS_elements.strong, __VLS_elements.strong)({});
     (__VLS_ctx.passenger.trips);
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({});
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.strong, __VLS_intrinsicElements.strong)({});
+    // @ts-ignore
+    [passenger,];
+    __VLS_asFunctionalElement(__VLS_elements.p, __VLS_elements.p)({});
+    __VLS_asFunctionalElement(__VLS_elements.strong, __VLS_elements.strong)({});
     (__VLS_ctx.passenger.airline.length);
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.button, __VLS_intrinsicElements.button)({
+    // @ts-ignore
+    [passenger,];
+    __VLS_asFunctionalElement(__VLS_elements.button, __VLS_elements.button)({
         ...{ onClick: (__VLS_ctx.updatePassenger) },
         ...{ class: "py-2 px-5 bg-green-500 text-white border-none rounded cursor-pointer mt-2 hover:bg-green-600" },
     });
+    // @ts-ignore
+    [updatePassenger,];
 }
 /** @type {__VLS_StyleScopedClasses['py-2']} */ ;
 /** @type {__VLS_StyleScopedClasses['px-5']} */ ;
@@ -56,7 +69,6 @@ const __VLS_self = (await import('vue')).defineComponent({
 });
 export default (await import('vue')).defineComponent({
     setup() {
-        return {};
     },
 });
 ; /* PartiallyEnd: #4569/main.vue */

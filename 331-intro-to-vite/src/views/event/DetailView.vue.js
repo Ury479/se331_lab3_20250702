@@ -7,25 +7,36 @@ const store = useMessageStore();
 const { message } = storeToRefs(store);
 debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_ctx = {};
+let __VLS_elements;
 let __VLS_components;
 let __VLS_directives;
-__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
+__VLS_asFunctionalElement(__VLS_elements.div, __VLS_elements.div)({});
 if (__VLS_ctx.message) {
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    // @ts-ignore
+    [message,];
+    __VLS_asFunctionalElement(__VLS_elements.div, __VLS_elements.div)({
         id: "flashMessage",
         ...{ class: "animate-fade" },
     });
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.h4, __VLS_intrinsicElements.h4)({});
+    __VLS_asFunctionalElement(__VLS_elements.h4, __VLS_elements.h4)({});
     (__VLS_ctx.message);
+    // @ts-ignore
+    [message,];
 }
-__VLS_asFunctionalElement(__VLS_intrinsicElements.h1, __VLS_intrinsicElements.h1)({});
+__VLS_asFunctionalElement(__VLS_elements.h1, __VLS_elements.h1)({});
 (__VLS_ctx.event.title);
-__VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({});
+// @ts-ignore
+[event,];
+__VLS_asFunctionalElement(__VLS_elements.p, __VLS_elements.p)({});
 (__VLS_ctx.event.time);
 (__VLS_ctx.event.date);
 (__VLS_ctx.event.location);
-__VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({});
+// @ts-ignore
+[event, event, event,];
+__VLS_asFunctionalElement(__VLS_elements.p, __VLS_elements.p)({});
 (__VLS_ctx.event.description);
+// @ts-ignore
+[event,];
 /** @type {__VLS_StyleScopedClasses['animate-fade']} */ ;
 var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
@@ -39,7 +50,6 @@ const __VLS_self = (await import('vue')).defineComponent({
 });
 export default (await import('vue')).defineComponent({
     setup() {
-        return {};
     },
     __typeProps: {},
 });

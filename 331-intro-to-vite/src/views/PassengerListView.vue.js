@@ -28,15 +28,20 @@ watchEffect(() => {
 });
 debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_ctx = {};
+let __VLS_elements;
 let __VLS_components;
 let __VLS_directives;
-__VLS_asFunctionalElement(__VLS_intrinsicElements.section, __VLS_intrinsicElements.section)({});
-__VLS_asFunctionalElement(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({});
+__VLS_asFunctionalElement(__VLS_elements.section, __VLS_elements.section)({});
+__VLS_asFunctionalElement(__VLS_elements.h2, __VLS_elements.h2)({});
 (__VLS_ctx.page + 1);
-__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+// @ts-ignore
+[page,];
+__VLS_asFunctionalElement(__VLS_elements.div, __VLS_elements.div)({
     ...{ class: "flex flex-wrap gap-4" },
 });
 for (const [passenger] of __VLS_getVForSourceType((__VLS_ctx.passengers))) {
+    // @ts-ignore
+    [passengers,];
     /** @type {[typeof PassengerCard, ]} */ ;
     // @ts-ignore
     const __VLS_0 = __VLS_asFunctionalComponent(PassengerCard, new PassengerCard({
@@ -48,46 +53,58 @@ for (const [passenger] of __VLS_getVForSourceType((__VLS_ctx.passengers))) {
         passenger: (passenger),
     }, ...__VLS_functionalComponentArgsRest(__VLS_0));
 }
-__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+__VLS_asFunctionalElement(__VLS_elements.div, __VLS_elements.div)({
     ...{ class: "flex w-72 justify-between mt-4" },
 });
 if (__VLS_ctx.page !== 0) {
-    const __VLS_3 = {}.RouterLink;
+    // @ts-ignore
+    [page,];
+    const __VLS_4 = {}.RouterLink;
     /** @type {[typeof __VLS_components.RouterLink, typeof __VLS_components.RouterLink, ]} */ ;
     // @ts-ignore
-    const __VLS_4 = __VLS_asFunctionalComponent(__VLS_3, new __VLS_3({
+    RouterLink;
+    // @ts-ignore
+    const __VLS_5 = __VLS_asFunctionalComponent(__VLS_4, new __VLS_4({
         id: "page-prev",
         ...{ class: "text-left no-underline text-gray-800" },
         to: ({ name: 'passenger-list', query: { page: __VLS_ctx.page - 1 } }),
         rel: "prev",
     }));
-    const __VLS_5 = __VLS_4({
+    const __VLS_6 = __VLS_5({
         id: "page-prev",
         ...{ class: "text-left no-underline text-gray-800" },
         to: ({ name: 'passenger-list', query: { page: __VLS_ctx.page - 1 } }),
         rel: "prev",
-    }, ...__VLS_functionalComponentArgsRest(__VLS_4));
-    __VLS_6.slots.default;
-    var __VLS_6;
+    }, ...__VLS_functionalComponentArgsRest(__VLS_5));
+    const { default: __VLS_8 } = __VLS_7.slots;
+    // @ts-ignore
+    [page,];
+    var __VLS_7;
 }
 if (__VLS_ctx.hasNextPage) {
-    const __VLS_7 = {}.RouterLink;
+    // @ts-ignore
+    [hasNextPage,];
+    const __VLS_9 = {}.RouterLink;
     /** @type {[typeof __VLS_components.RouterLink, typeof __VLS_components.RouterLink, ]} */ ;
     // @ts-ignore
-    const __VLS_8 = __VLS_asFunctionalComponent(__VLS_7, new __VLS_7({
+    RouterLink;
+    // @ts-ignore
+    const __VLS_10 = __VLS_asFunctionalComponent(__VLS_9, new __VLS_9({
         id: "page-next",
         ...{ class: "text-right no-underline text-gray-800" },
         to: ({ name: 'passenger-list', query: { page: __VLS_ctx.page + 1 } }),
         rel: "next",
     }));
-    const __VLS_9 = __VLS_8({
+    const __VLS_11 = __VLS_10({
         id: "page-next",
         ...{ class: "text-right no-underline text-gray-800" },
         to: ({ name: 'passenger-list', query: { page: __VLS_ctx.page + 1 } }),
         rel: "next",
-    }, ...__VLS_functionalComponentArgsRest(__VLS_8));
-    __VLS_10.slots.default;
-    var __VLS_10;
+    }, ...__VLS_functionalComponentArgsRest(__VLS_10));
+    const { default: __VLS_13 } = __VLS_12.slots;
+    // @ts-ignore
+    [page,];
+    var __VLS_12;
 }
 /** @type {__VLS_StyleScopedClasses['flex']} */ ;
 /** @type {__VLS_StyleScopedClasses['flex-wrap']} */ ;
@@ -121,7 +138,6 @@ const __VLS_self = (await import('vue')).defineComponent({
 });
 export default (await import('vue')).defineComponent({
     setup() {
-        return {};
     },
     props: {
         page: {

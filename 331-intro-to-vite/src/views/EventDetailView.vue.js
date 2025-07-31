@@ -14,23 +14,34 @@ onMounted(() => {
 });
 debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_ctx = {};
+let __VLS_elements;
 let __VLS_components;
 let __VLS_directives;
 if (__VLS_ctx.event) {
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({});
+    // @ts-ignore
+    [event,];
+    __VLS_asFunctionalElement(__VLS_elements.div, __VLS_elements.div)({});
+    __VLS_asFunctionalElement(__VLS_elements.h2, __VLS_elements.h2)({});
     (__VLS_ctx.event.title);
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({});
+    // @ts-ignore
+    [event,];
+    __VLS_asFunctionalElement(__VLS_elements.p, __VLS_elements.p)({});
     (__VLS_ctx.event.description);
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({});
+    // @ts-ignore
+    [event,];
+    __VLS_asFunctionalElement(__VLS_elements.p, __VLS_elements.p)({});
     (__VLS_ctx.event.organizer);
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({});
+    // @ts-ignore
+    [event,];
+    __VLS_asFunctionalElement(__VLS_elements.p, __VLS_elements.p)({});
     (__VLS_ctx.event.date);
     (__VLS_ctx.event.time);
+    // @ts-ignore
+    [event, event,];
 }
 else {
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({});
+    __VLS_asFunctionalElement(__VLS_elements.div, __VLS_elements.div)({});
+    __VLS_asFunctionalElement(__VLS_elements.p, __VLS_elements.p)({});
 }
 var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
@@ -48,7 +59,6 @@ const __VLS_self = (await import('vue')).defineComponent({
 });
 export default (await import('vue')).defineComponent({
     setup() {
-        return {};
     },
     props: {
         id: {
